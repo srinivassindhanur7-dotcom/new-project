@@ -1,16 +1,12 @@
 pipeline {
     agent any
 
-    tools {
-        maven 'Maven3'
-        jdk 'JDK17'
-    }
-
     stages {
+
         stage('Checkout') {
             steps {
-                git branch: 'main',
-                     url: 'https://github.com/srinivassindhanur7-dotcom/new-project.git'
+                git 'https://github.com/srinivassindhanur7-dotcom/new-project.git'
+            }
         }
 
         stage('Build') {
