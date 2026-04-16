@@ -3,12 +3,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                git 'https://github.com/srinivassindhanur7-dotcom/new-project.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'mvn clean package'
