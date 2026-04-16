@@ -9,8 +9,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main' 'https://github.com/srinivassindhanur7-dotcom/new-project.git'
-            }
+                git branch: 'main',
+                     url: 'https://github.com/srinivassindhanur7-dotcom/new-project.git'
         }
 
         stage('Build') {
